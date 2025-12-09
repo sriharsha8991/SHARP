@@ -1,0 +1,225 @@
+{
+  "evaluation_metadata": {
+    "date": "2025-12-10 00:52:53",
+    "pdf_file": "Final Project 1.pdf",
+    "num_queries": 10,
+    "num_documents": 19
+  },
+  "system_config": {
+    "llm_model": "models/gemini-flash-lite-latest",
+    "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "top_k": 10
+  },
+  "retrieval_metrics": [
+    {
+      "Method": "Sparse (BM25)",
+      "Avg Score": "2.9829",
+      "Score Std": "0.6151",
+      "Precision@5": "0.4400",
+      "Precision@10": "0.4200",
+      "Recall@5": "0.9500",
+      "Recall@10": "1.0000"
+    },
+    {
+      "Method": "Dense (Embeddings)",
+      "Avg Score": "0.3710",
+      "Score Std": "0.0566",
+      "Precision@5": "0.6200",
+      "Precision@10": "0.4600",
+      "Recall@5": "0.8500",
+      "Recall@10": "1.0000"
+    },
+    {
+      "Method": "Hybrid (α=0.3)",
+      "Avg Score": "0.5304",
+      "Score Std": "0.0977",
+      "Precision@5": "0.4600",
+      "Precision@10": "0.4400",
+      "Recall@5": "0.9000",
+      "Recall@10": "1.0000"
+    },
+    {
+      "Method": "Hybrid (α=0.5)",
+      "Avg Score": "0.5600",
+      "Score Std": "0.0953",
+      "Precision@5": "0.6400",
+      "Precision@10": "0.4500",
+      "Recall@5": "0.9000",
+      "Recall@10": "1.0000"
+    },
+    {
+      "Method": "Hybrid (α=0.7)",
+      "Avg Score": "0.5948",
+      "Score Std": "0.1045",
+      "Precision@5": "0.6400",
+      "Precision@10": "0.4400",
+      "Recall@5": "0.9000",
+      "Recall@10": "1.0000"
+    }
+  ],
+  "generation_metrics": {
+    "avg_generation_time": "1.19s",
+    "avg_answer_length": 746,
+    "citation_rate": "0/10",
+    "avg_citations_per_answer": 0.0
+  },
+  "test_queries": [
+    "What are the three main project options for the final project?",
+    "What are the evaluation criteria for the final project?",
+    "What is the required format for the technical report?",
+    "What are the deliverables for the final project?",
+    "What datasets are suggested for the project?",
+    "What topics are covered under Neural Retrieval Models?",
+    "What is required for a research paper on empirical study?",
+    "What are the submission guidelines?",
+    "What is the objective of the final project?",
+    "What should be included in the technical report structure?"
+  ],
+  "generated_answers": [
+    {
+      "query_id": 0,
+      "query": "What are the three main project options for the final project?",
+      "answer": "The context mentions one primary project direction under \"Project Options\":\n\n1. **System Development**: Design and build a small-to-medium-scale IR system. This could include:\n    *   A search engine for a domain-specific corpus (e.g., legal texts, scientific articles, reviews) (Source: Final Project 1.pdf, Page 0)\n    *   A question-answering system over structured or unstructured data (Source: Final Project 1.pdf, Page 0)\n    *   A personalized or recommendation-based retrieval system (Source: Final Project 1.pdf, Page 0)\n\nThe objective of the final project is broadly defined as allowing students to design, implement, and evaluate an Information Retrieval (IR) system or conduct original research on an IR topic (Source: Final Project 1.pdf, Page 0). While the document lists \"System Development\" as an option, and suggests topics that imply research/model comparison (e.g., Classical and Neural Retrieval Models) (Source: Final Project 1.pdf, Page 3), it explicitly lists only one section titled \"Project Options\" which details the System Development direction.",
+      "generation_time": 1.4910235404968262,
+      "answer_length": 1072
+    },
+    {
+      "query_id": 1,
+      "query": "What are the evaluation criteria for the final project?",
+      "answer": "The final project will be graded based on the following evaluation criteria:\n\n1. **Problem Choice and Relevance:** The significance of the problem selected and how well Information Retrieval (IR) is applied to it. (Source: Final Project 1.pdf, Page 1)\n2. **Related work:** Whether the related work is discussed and evaluated adequately, and if the paper's contribution is compared and contrasted with prior work in the field. (Source: Final Project 1.pdf, Page 1)\n3. **Algorithm Implementation (if applicable):** How well the chosen IR algorithm(s) were implemented, including any modifications or original contributions. (Source: Final Project 1.pdf, Page 2)\n4. **Experimental Design and Results:** The quality of the experiments, evaluation metrics used, and the clarity of the results and insights drawn. (Source: Final Project 1.pdf, Page 2)\n5. **Clarity and Completeness of Report:** How well the findings are communicated and the depth of the analysis in the report, including adherence to IEEE format, clarity, and coherence of the writing. (Source: Final Project 1.pdf, Page 2)",
+      "generation_time": 1.1743073463439941,
+      "answer_length": 1085
+    },
+    {
+      "query_id": 2,
+      "query": "What is the required format for the technical report?",
+      "answer": "The required format for the technical report is the **IEEE conference format** (Source: Final Project 1.pdf, Page 2).\n\nThe report should typically include the following sections (Source: Final Project 1.pdf, Page 2):\n1. Abstract\n2. Introduction and motivation\n3. Related work\n4. System design or methodology\n5. Experiments and results\n6. Discussion and future work\n7. References",
+      "generation_time": 1.015934944152832,
+      "answer_length": 378
+    },
+    {
+      "query_id": 3,
+      "query": "What are the deliverables for the final project?",
+      "answer": "The deliverables for the final project include:\n\n1.  **A technical report** written in IEEE conference format, which should typically include:\n    *   Abstract\n    *   Introduction and motivation\n    *   Related work\n    *   System design or methodology\n    *   Experiments and results\n    *   Discussion and future work\n    *   References\n    (Source: Final Project 1.pdf, Page 2)\n\n2.  **A jupyter/colab notebook (.ipynb) or .py file** containing the code used for implementation (if applicable), ensuring it runs with no errors and the results match what is listed in the paper. (Source: Final Project 1.pdf, Page 2)",
+      "generation_time": 1.1481053829193115,
+      "answer_length": 618
+    },
+    {
+      "query_id": 4,
+      "query": "What datasets are suggested for the project?",
+      "answer": "The suggested datasets for the project are: TREC, MS MARCO, Wikipedia Dumps, Common Crawl, arXiv, PubMed, and Stack Overflow (Source: Final Project 1.pdf, Page 1).",
+      "generation_time": 0.8940894603729248,
+      "answer_length": 163
+    },
+    {
+      "query_id": 5,
+      "query": "What topics are covered under Neural Retrieval Models?",
+      "answer": "The topics covered under Classical and Neural Retrieval Models include:\n\n*   Comparison of BM25, TF-IDF, and dense embedding-based models (Source: Final Project 1.pdf, Page 3)\n*   Fine-tuning transformer-based retrievers (e.g., BERT, DPR, ColBERT) for domain-specific corpora (Source: Final Project 1.pdf, Page 3)\n*   Evaluating hybrid retrieval systems (e.g., sparse + dense fusion) (Source: Final Project 1.pdf, Page 3)\n*   Integration of traditional IR models (e.g., BM25) with neural re-ranking or embedding-based methods (Source: Final Project 1.pdf, Page 0)\n\nAdditionally, a suggested research direction within a Literature Review involves surveying and synthesizing recent research in \"Neural retrieval methods\" (Source: Final Project 1.pdf, Page 0).",
+      "generation_time": 1.1870269775390625,
+      "answer_length": 757
+    },
+    {
+      "query_id": 6,
+      "query": "What is required for a research paper on empirical study?",
+      "answer": "The context provided describes two main options for the Final Project: a Research Paper (which can be a Literature Review or an Empirical Study) and an Empirical Study option (listed under the \"b) Empirical Study\" heading).\n\nFor the **Empirical Study** component of the project, the following are required:\n1. Clear research questions or hypotheses (Source: Final Project 1.pdf, Page 1).\n2. Sound experimental design and evaluation (Source: Final Project 1.pdf, Page 1).\n3. Use of public datasets and/or tools (Source: Final Project 1.pdf, Page 1).\n\nExamples of possible empirical studies include:\n*   Reproducing and comparing baseline IR models (e.g., BM25, DPR, ColBERT) (Source: Final Project 1.pdf, Page 1).\n*   Evaluating retrieval performance across datasets or domains (Source: Final Project 1.pdf, Page 1).\n*   Analyzing the behavior of search algorithms under different conditions (Source: Final Project 1.pdf, Page 1).\n*   Studying efficiency–effectiveness trade-offs (Source: Final Project 1.pdf, Page 1).\n\nFurthermore, the overall project contribution (which applies to both paths) should be:\n*   Clearly motivated and grounded in existing work (Source: Final Project 1.pdf, Page 1).\n*   Technically detailed and implemented (prototype or proof-of-concept) (Source: Final Project 1.pdf, Page 1).\n*   Evaluated against appropriate baselines or metrics (Source: Final Project 1.pdf, Page 1).",
+      "generation_time": 1.540902853012085,
+      "answer_length": 1402
+    },
+    {
+      "query_id": 7,
+      "query": "What are the submission guidelines?",
+      "answer": "The submission guidelines for the final project are as follows:\n\n*   Only one team member should submit all project deliverables to the designated folder on D2L. This is to prevent duplicate submissions and avoid issues related to self-plagiarism. (Source: Final Project 1.pdf, Page 2)\n\nThe required deliverables that must be submitted include:\n\n*   A jupyter/colab notebook (.ipynb) or .py file containing the code used for implementation (if applicable). This code must run with no errors, and the results must match what is listed in the paper. (Source: Final Project 1.pdf, Page 2)\n*   A 10–15 Minute recorded presentation summarizing the final technical report. All team members must participate and present a portion of the material. This video should be saved as an .mp4 file and submitted. (Source: Final Project 1.pdf, Page 2)\n*   A technical report written in IEEE conference format. (Source: Final Project 1.pdf, Page 2)",
+      "generation_time": 1.3197014331817627,
+      "answer_length": 931
+    },
+    {
+      "query_id": 8,
+      "query": "What is the objective of the final project?",
+      "answer": "The objective of the final project in CSC 785: Information Storage and Retrieval is to allow students to apply the theoretical and practical knowledge gained throughout the course. Students must design, implement, and evaluate an Information Retrieval (IR) system or conduct original research on an IR topic. The project should demonstrate mastery of indexing, retrieval models, evaluation techniques, and possibly modern topics such as neural IR. (Source: Final Project 1.pdf, Page 0)",
+      "generation_time": 1.0279908180236816,
+      "answer_length": 485
+    },
+    {
+      "query_id": 9,
+      "query": "What should be included in the technical report structure?",
+      "answer": "The technical report, written in IEEE conference format, should typically include the following sections: (Source: Final Project 1.pdf, Page 2)\n1. Abstract (Source: Final Project 1.pdf, Page 2)\n2. Introduction and motivation (Source: Final Project 1.pdf, Page 2)\n3. Related work (Source: Final Project 1.pdf, Page 2)\n4. System design or methodology (Source: Final Project 1.pdf, Page 2)\n5. Experiments and results (Source: Final Project 1.pdf, Page 2)\n6. Discussion and future work (Source: Final Project 1.pdf, Page 2)\n7. References (Source: Final Project 1.pdf, Page 2)",
+      "generation_time": 1.063680648803711,
+      "answer_length": 571
+    }
+  ],
+  "citation_analysis": [
+    {
+      "query_id": 0,
+      "query": "What are the three main project options for the fi...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 949
+    },
+    {
+      "query_id": 1,
+      "query": "What are the evaluation criteria for the final pro...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 1084
+    },
+    {
+      "query_id": 2,
+      "query": "What is the required format for the technical repo...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 741
+    },
+    {
+      "query_id": 3,
+      "query": "What are the deliverables for the final project?...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 842
+    },
+    {
+      "query_id": 4,
+      "query": "What datasets are suggested for the project?...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 163
+    },
+    {
+      "query_id": 5,
+      "query": "What topics are covered under Neural Retrieval Mod...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 760
+    },
+    {
+      "query_id": 6,
+      "query": "What is required for a research paper on empirical...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 1492
+    },
+    {
+      "query_id": 7,
+      "query": "What are the submission guidelines?...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 796
+    },
+    {
+      "query_id": 8,
+      "query": "What is the objective of the final project?...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 497
+    },
+    {
+      "query_id": 9,
+      "query": "What should be included in the technical report st...",
+      "num_citations": 0,
+      "has_citation": false,
+      "answer_length": 581
+    }
+  ]
+}
